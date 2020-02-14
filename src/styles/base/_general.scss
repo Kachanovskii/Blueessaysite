@@ -1,0 +1,89 @@
+h1, h2, h3, h4, h5, h6, ul, body {
+    margin: 0;
+    padding: 0;
+}
+
+.header-1{
+    @include font ($d3-p4,$Poppins-Bold,35px,700);
+}
+.header-2{
+    @include font ($d2-p4,$Poppins-Medium,33px,500);
+}
+.header-3{
+    @include font ($d3-p4,$Poppins-Medium,27pt,500);
+}
+.header-4{
+    @include font ($d3-p4,$Poppins-Medium,22pt,500);
+}
+.header-5{
+    @include font ($d3-p4,$Poppins-Medium,17pt,500);
+}
+.header-6{
+    @include font ($d3-p4,$Poppins-Medium,15pt,500);
+}
+
+.paragraph{
+    @include font ($d1-p4,$Poppins-Medium,14pt,500);
+}
+.subtitle{
+    @include font ($d1-p4,$Poppins-Medium,20pt,500);
+}
+.subtitle:hover{
+    color: $base-white;
+    background-color: $primary-1;
+}
+.list-style{
+    @include font ($d1-p4,$Poppins-Medium,15pt,500);
+    list-style-type: none;
+    li::before{
+        content: '\f058';
+        font-family: 'Font Awesome 5 Free';
+        font-size: 18px;
+        font-weight: bold;
+        color: $primary-1;
+        margin-right: 10px;
+    }
+}
+//buttons
+button{
+    border-radius: 3px;
+    border: none;
+    padding: .7rem 1.5rem;
+}
+.btn-1{
+    background: $d1-p1;
+    @include font ($base-white,$Poppins-SemiBold,14px,600);
+    text-transform: uppercase;
+    &:hover{
+        background: $li1-p1;
+        color: $base-white;
+    }
+    &:disabled{
+        background: $li2-p4;
+    }
+}
+.b-orange{
+    background: $primary-2;
+    @include font ($base-white,$Poppins-SemiBold,14px,600);
+    text-transform: uppercase;
+    &:hover{
+        background: $li1-p2;
+        color: $base-white;
+    }
+    &:disabled{
+        background: $li2-p4;
+    }
+}
+
+.btn-2{
+    background: $d1-p1;
+    @include font ($base-white,$Poppins-Medium,14px,500);
+    &:hover{
+        background: $li1-p1;
+        color: $base-white;
+    }
+    &:disabled{
+        background: $li2-p4;
+    }
+}
+

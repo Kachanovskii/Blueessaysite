@@ -1,0 +1,45 @@
+// color
+$primary-1: #03a9f4;
+$primary-2: #f75e2e;
+$primary-3: #ecfa4d;
+$primary-4: #656a70;
+$primary-5: #09a912;
+$primary-6: #f44747;
+$primary-7: #ffaa33;
+$base-white: #ffffff;
+$base-dark: #000000;
+
+$li1-p1: mix($primary-1,$base-white,60%);
+$li2-p1: mix($primary-1,$base-white,25%);
+$li3-p1: mix($primary-1,$base-white,10%);
+$d1-p1: mix($primary-1,$base-dark,80%);
+$d2-p1: mix($primary-1,$base-dark,50%);
+$d3-p1: mix($primary-1,$base-dark,30%);
+
+$li1-p2: mix($primary-2,$base-white,60%);
+$li2-p2: mix($primary-2,$base-white,25%);
+$li3-p2: mix($primary-2,$base-white,10%);
+$d1-p2: mix($primary-2,$base-dark,80%);
+$d2-p2: mix($primary-2,$base-dark,50%);
+$d3-p2: mix($primary-2,$base-dark,30%);
+
+$li1-p3: mix($primary-3,$base-white,60%);
+$li2-p3: mix($primary-3,$base-white,25%);
+$li3-p3: mix($primary-3,$base-white,10%);
+$d1-p3: mix($primary-3,$base-dark,80%);
+$d2-p3: mix($primary-3,$base-dark,50%);
+$d3-p3: mix($primary-3,$base-dark,30%);
+
+$li1-p4: mix($primary-4,$base-white,60%);
+$li2-p4: mix($primary-4,$base-white,25%);
+$li3-p4: mix($primary-4,$base-white,10%);
+$d1-p4: mix($primary-4,$base-dark,80%);
+$d2-p4: mix($primary-4,$base-dark,50%);
+$d3-p4: mix($primary-4,$base-dark,30%);
+
+// font
+$Poppins-Regular: 'Poppins-Regular';
+$Poppins-Bold: 'Poppins-Bold';
+$Poppins-Medium: 'Poppins-Medium';
+$Poppins-SemiBold: 'Poppins-SemiBold';
+$Poppins-Light: 'Poppins-Light';

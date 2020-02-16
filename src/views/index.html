@@ -18,15 +18,59 @@
  @@include("../blocks/modules/header/header.html")
  @@include("../blocks/modules/banner/banner.html")
  @@include("../blocks/modules/main/main.html")
+ @@include("../blocks/modules/block-1/block-1.html")
+ @@include("../blocks/modules/slider/slider.html")
  @@include("../blocks/modules/footer/footer.html")
 
+<!-- slider -->
+<script>
+    var slideIndex = [1,1];
+    var slideId = ["mySlides1", "mySlides2"]
+    showSlides(1, 0);
+    showSlides(1, 1);
+    
+    function plusSlides(n, no) {
+      showSlides(slideIndex[no] += n, no);
+    }
+    
+    function showSlides(n, no) {
+      var i;
+      var x = document.getElementsByClassName(slideId[no]);
+      if (n > x.length) {slideIndex[no] = 1}    
+      if (n < 1) {slideIndex[no] = x.length}
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";  
+      }
+      x[slideIndex[no]-1].style.display = "block";  
+    }
+    </script>
+<!-- slider -->
 
  <script>
      function openNav() {
-         document.getElementById("mySidepanel").style.width = "100%";
+         document.getElementById("mySidepanel").style.width = "90%";
      }
+
      function closeNav() {
          document.getElementById("mySidepanel").style.width = "0";
+     }
+ </script>
+ <script>
+    //  click
+     function myFunction() {
+         document.getElementById("myDropdown").classList.toggle("show");
+     }
+     window.onclick = function (event) {
+         if (!event.target.matches('.dropbtn')) {
+             var dropdowns = document.getElementsByClassName("dropdown-content");
+             var i;
+             for (i = 0; i < dropdowns.length; i++) {
+                 var openDropdown = dropdowns[i];
+                 if (openDropdown.classList.contains('show')) {
+                     openDropdown.classList.remove('show');
+                 }
+             }
+         }
      }
  </script>
  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

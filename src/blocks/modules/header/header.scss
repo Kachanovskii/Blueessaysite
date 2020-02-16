@@ -1,4 +1,4 @@
-section {
+header {
     ul {
         list-style-type: none;
     }
@@ -116,9 +116,11 @@ section {
     }
 }
 
+//side-bar0
+
 //side-bar
 .sidepanel {
-    width: 100%;
+    display: none;
     position: fixed;
     z-index: 1;
     height: 100%;
@@ -130,7 +132,7 @@ section {
     padding-top: 60px;
 }
 
-section .header .sidepanel a {
+header .header .sidepanel a {
     @include font ($base-white, $Poppins-Regular, 20px, 400);
             line-height: 16px;     
     text-align: center;
@@ -141,11 +143,11 @@ section .header .sidepanel a {
     transition: 0.3s;
 }
 
-section .header .sidepanel a:hover {
+header .header .sidepanel a:hover {
     color: $primary-2;
 }
 
-section .header .sidepanel .closebtn {
+header .header .sidepanel .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
@@ -232,11 +234,11 @@ section .header .sidepanel .closebtn {
         width: 100px;
         margin-bottom: 10px;
     }
-    section .header .sidepanel a{
+    header .header .sidepanel a{
         font-size: 12px;
         padding: 10px;
     }
-    section .header .navbar .dropup-content a {
+    header .header .navbar .dropup-content a {
         color: $d3-p4;
         &:hover{
             color: $primary-2;

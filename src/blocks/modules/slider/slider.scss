@@ -1,0 +1,78 @@
+.slider{
+    padding-top: 250px;
+    .container{
+        padding:65px 15px;
+        .row{
+            display: block;
+            text-align: center;
+            .header-2{
+                padding: 30px 0;
+            }
+            .carousel{
+                .carousel-item {
+                    padding: 0 250px;
+                    text-align: center;
+                    .fonavatar {
+                        position: relative;
+                        display: block;
+                        width: 60px;
+                        height: 60px;
+                        background-color: #e7e965;
+                        border-radius: 50%;
+                        text-align: center;
+                        margin: 0 auto;
+                    }
+                    .fonavatar2{
+                        background-color: $li1-p2;
+                    }
+                    .fonavatar3{
+                        background-color: $li1-p1;
+                    }
+                    .avatar{
+                        position: absolute;
+                        bottom: 0;
+                        left: 10px;
+                    }
+                    p{
+                        @include font ($li1-p4,'Poppins-Light',14px,300);
+                        line-height: 22px;
+                        padding: 30px 0;
+                    }
+                    .data{
+                        @include font ($li2-p4,'Poppins-Light',13px,300);  
+                        padding: 15px 0;
+                    }
+                    a{
+                        @include font ($d1-p1,$Poppins-SemiBold,17px,600);  
+                    }
+                }
+                .sprev{
+                    position: relative;
+                    display: block;
+                    height: 30px;
+                    width: 2px;
+                    background-color: $primary-1;
+                    transform: rotate(45deg);
+                }
+                .sprev::after{
+                    content: '';
+                    position: absolute;
+                    bottom: -17px;
+                    left: 15px;
+                    display: block;
+                    height: 30px;
+                    width: 2px;
+                    background-color: $primary-1;
+                    transform: rotate(-80deg);
+                }
+                .snext{
+                    transform: rotate(-45deg);
+                }
+                .snext::after{
+                    transform: rotate(80deg);  
+                    left: -15px;
+                }
+            }
+        }
+    }
+}

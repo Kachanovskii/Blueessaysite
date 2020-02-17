@@ -10,8 +10,8 @@
             }
             .carousel{
                 .carousel-item {
-                    padding: 0 250px;
                     text-align: center;
+                    padding: 0 250px;
                     .fonavatar {
                         position: relative;
                         display: block;
@@ -74,5 +74,39 @@
                 }
             }
         }
+    }
+}
+@media (max-width:1200px) {
+    .slider {
+        padding-top: 295px;
+    }
+    .slider .container .row .carousel .carousel-item{
+        padding: 0 150px;
+    }
+}
+@media (max-width:992px) {
+    .slider{
+        padding-top: 0;
+    }
+    .slider .container .row .carousel .carousel-item{
+        padding: 0 100px;
+    }
+}
+@media (max-width:768px) {
+    .slider .container .row .carousel .carousel-item {
+        padding: 0 50px;
+    }
+    .carousel-control-next,
+    .carousel-control-prev {
+        width: 5%;
+    }
+    .slider .container .row .header-2 {
+        font-size: 27px;
+    }
+    .slider .container{
+        padding: 30px 15px;
+    }
+    .slider .container .row .carousel .carousel-item p{
+        padding: 20px 0;
     }
 }

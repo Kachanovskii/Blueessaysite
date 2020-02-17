@@ -44,19 +44,17 @@
       x[slideIndex[no]-1].style.display = "block";  
     }
     </script>
-<!-- slider -->
-
+<!-- sidenav-burger -->
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+</script>
+<!-- click -->
  <script>
-     function openNav() {
-         document.getElementById("mySidepanel").style.width = "90%";
-     }
-
-     function closeNav() {
-         document.getElementById("mySidepanel").style.width = "0";
-     }
- </script>
- <script>
-    //  click
      function myFunction() {
          document.getElementById("myDropdown").classList.toggle("show");
      }

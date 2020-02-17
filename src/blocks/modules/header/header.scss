@@ -17,20 +17,63 @@ header {
 
             .navbar {
                 padding: 0;
-
                 .nav {
-
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
                     padding: 0;
                 }
             }
-
         }
-    }
-}
-
+        }
+        }
+// sidenav-burger
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: $d2-p1;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 25px;
+  }
+  .burger{
+      color: $base-white;
+  }
+  .burger:hover{
+      color: $primary-2;
+  }
+  header .sidenav a {
+    padding: 10px 8px 10px 32px;
+    @include font ($base-white,$Poppins-Medium,18px,500);
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+      margin-left: auto;
+      text-align: right;
+      display: block;
+    padding: 0 25px;
+    font-size: 36px;
+    // margin-left: 50px;
+  }
+  .sidenav .closebtn:hover{
+      color:red;
+      text-decoration: none;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
 // drop-down
 .dropbtn {
     background-color: transparent;
@@ -62,7 +105,7 @@ header {
     background-color: $base-white;
     min-width: 160px;
     top: 96%;
-    z-index: 1;
+    z-index: 10;
 }
 
 .navbar .dropup-content a {
@@ -116,60 +159,6 @@ header {
     }
 }
 
-//side-bar0
-
-//side-bar
-.sidepanel {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: $d2-p1;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-header .header .sidepanel a {
-    @include font ($base-white, $Poppins-Regular, 20px, 400);
-            line-height: 16px;     
-    text-align: center;
-    padding: 20px;
-    text-decoration: none;
-    font-size: 25px;
-    display: block;
-    transition: 0.3s;
-}
-
-header .header .sidepanel a:hover {
-    color: $primary-2;
-}
-
-header .header .sidepanel .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    &:hover{
-        color: $primary-2;
-    }
-}
-
-.openbtn {
-    font-size: 20px;
-    cursor: pointer;
-    background-color: transparent;
-    color: $base-white;
-    padding: 9px 15px;
-    border: none;
-}
-
-.openbtn:hover {
-    color: $primary-2;
-}
-
 //sprite
 .sprite {
     background-image: url(../../../img/spritesheet.png);
@@ -183,96 +172,89 @@ header .header .sidepanel .closebtn {
     background-position: -5px -5px;
 }
 
-.sprite-phone {
+.sprite-phone-h {
     width: 31px;
     height: 31px;
     background-position: -76px -5px;
     border-radius: 50%;
     margin: 0 10px;
-    &:hover{
+
+    &:hover {
         background-color: $d3-p1;
     }
 }
+
 // navbar-brand-m
-.navbar-brand-m{
+.navbar-brand-m {
     display: none;
 }
-
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+.change .bar2 {
+    opacity: 0;
+}
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
 
 // @media
-@media (max-width:1200px){
+
+@media(max-width:991px){
     .dropbtn {
-        padding: 10px;
-        text-align: left;
+        padding: 5px 8px 5px 32px;
+        @include font ($base-white, $Poppins-Medium, 18px, 500);
+        transition: 0.3s;
         span{
-            margin-left: 5px;
+            padding-left: 10px;
+            font-size: 18px;
+            i{
+                top:5px;
+            }
         }
-    }
-    .sprite-phone{
-        margin: 0 5px;
-    }
-    .dropup-link{
-        padding: 10px;
-    }
-}
-@media (max-width:992px){
-    .sidepanel a {
-        padding: 10px 0;
-    }
-    .dropbtn-ml{
-        margin: 0;
     }
     .dropup-content{
-        position: static;
-        width: 30%;
-        margin: 0 auto;
+        position: relative;
+        transition: 0.3s ease;
     }
-    button{
-        margin: 0 auto;
-    }
-    .btn-1, .b-orange{
-        width: 100px;
-        margin-bottom: 10px;
-    }
-    header .header .sidepanel a{
-        font-size: 12px;
-        padding: 10px;
-    }
-    header .header .navbar .dropup-content a {
-        color: $d3-p4;
-        &:hover{
-            color: $primary-2;
-        }
-    }
-    .sprite-phone{
-        position: absolute;
-        top: 5px;
-        left: 25px;
-    }
-    .openbtn{
-        font-size: 25px;
-        margin: 0;
+    .navbar .dropup-content a{
+        @include font ($d2-p4, $Poppins-Medium, 15px, 500);   
+        padding: 10px 8px 10px 35px;
+        transition: 0.3s;
     }
 }
-@media (max-width:375px){
-    .navbar{
+@media(max-width:768px){
+    .buttom-s{
+        padding: 15px;
+    }
+}
+@media (max-width:375px) {
+    .navbar {
         position: relative;
     }
-    .navbar-brand{
+
+    .navbar-brand {
         opacity: 0;
         width: 0;
         height: 0;
         position: absolute;
     }
-    .navbar-brand-m{
+    .navbar-brand-m {
         display: block;
         width: 65%;
-        img{
+        img {
             width: 100%;
         }
     }
-    .openbtn{
-        padding: 0;
-    }
-   
 }

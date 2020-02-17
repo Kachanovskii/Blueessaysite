@@ -1,7 +1,8 @@
 .banner{
     position: relative;
     background:$li3-p1;
-    .clouds, .city{
+    z-index: 5;
+    .clouds, .city {
         position: absolute;
     }
     .clouds{
@@ -18,10 +19,11 @@
         padding: 100px 15px 0;
         .row{
             .content{
+                z-index: 1;
                 width: 100%;
                 // content
                 a,span{
-                    @include font ($primary-1,$Poppins-SemiBold,47px,600)  
+                    @include font ($primary-1,$Poppins-Bold,47px,700)  
                 }
                 a{
                     letter-spacing: -0.94px;

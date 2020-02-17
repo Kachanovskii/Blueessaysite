@@ -1,23 +1,28 @@
 .block-1{
     background: $primary-1;
     padding-bottom: 275px;
-    // img{
-    //     position: absolute;
-    //     z-index: 2;
-    // }
-    // .cloud-l{
-    //     left: 0;
-    //     top: 30px;
-    // }
-    // .cloud-r{
-    //     right: 0;
-    //     top: 30px;
-    // }
-    // .cloud-b{
-    //     bottom: 0;
-    //     width: 95%;
-    // }
+    position: relative;
+    z-index: 5;
+    img{
+        position: absolute;
+    }
+    .cloud-l{
+        left: 0;
+        top: 30px;
+    }
+    .cloud-r{
+        right: 0;
+        top: 30px;
+    }
+    .cloud-b{
+        bottom: 0;
+        width: 97%;
+    }
+    .rocket{
+        top: 100px;
+    }
     .container{
+        z-index: 2;
         display: flex;
         justify-content: center;
         align-items: center;

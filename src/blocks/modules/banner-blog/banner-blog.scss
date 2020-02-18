@@ -1,0 +1,40 @@
+.banner-blog{
+    background: $li3-p1 url(../../../img/city.png);
+    .container{
+        padding: 85px 015px;
+        ul{
+            list-style-type: none;
+        }
+        .nav{
+            display: block;
+            .navigation{
+                padding-top: 15px;
+                display: flex;
+            }
+            a{
+                display: block;
+                @include font($li1-p4,$Poppins-Regular,14px,400);
+                text-transform: uppercase;
+                padding-right: 15px;
+                &:hover{
+                    color: $primary-2;
+                    text-decoration: none;
+                }
+            }
+            .active{
+                @include font($d1-p4,$Poppins-Medium,14px,500);
+                &:hover{
+                    color: $primary-4;
+                }
+            }
+            span{
+                font-family: 'MuseoSans-500';
+                font-size: 16px;
+                padding-left: 15px;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

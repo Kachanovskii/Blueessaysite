@@ -195,6 +195,14 @@
     .block-1 .container .content-2 .container-box p {
         padding: 0;
     }
+    .block-1 {
+        .cloud-l,
+        .cloud-r,
+        .cloud-b,
+        .rocket {
+            display: none;
+        }
+    }
 }
 @media (max-width:768px){
     .block-1 .container{

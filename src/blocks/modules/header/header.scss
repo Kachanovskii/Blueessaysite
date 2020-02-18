@@ -2,19 +2,15 @@ header {
     ul {
         list-style-type: none;
     }
-
     .header {
         background-color: $primary-1;
-
         a {
             @include font ($base-white, $Poppins-Regular, 12px, 400);
             line-height: 16px;
             text-transform: uppercase;
         }
-
         .container {
             padding: 15px;
-
             .navbar {
                 padding: 0;
                 .nav {
@@ -25,8 +21,8 @@ header {
                 }
             }
         }
-        }
-        }
+    }
+}
 // sidenav-burger
 .sidenav {
     height: 100%;
@@ -54,7 +50,7 @@ header {
   }
   
   .sidenav a:hover {
-    color: #f1f1f1;
+    color:$primary-2;
   }
   
   .sidenav .closebtn {

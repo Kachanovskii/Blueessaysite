@@ -1,0 +1,98 @@
+.blog{
+    .container{
+        padding: 55px 15px;
+        ul{
+            list-style-type: none;
+        }
+        // navigation
+        .nav{
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid $li1-p4;
+        }
+        .navigation{
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+            li{
+                width: 100%;
+                text-align: center;
+                display: block;
+                a{
+                    display: block;
+                    @include font($li1-p4, $Poppins-Regular,14px,400);
+                    line-height: 80px;
+                    &:hover{
+                        text-decoration: none;
+                        color: $primary-2;
+                    }
+                }
+                .active{
+                    color: $primary-2;
+                    opacity: 1;
+                }
+                hr{
+                    margin: 0;
+                    background-color: $primary-2;
+                    height: 1px;
+                    opacity: 0;
+                }
+            }
+            li:hover>hr{
+                opacity: 1;
+            }
+        }
+        .howlook{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            a i{
+                color: $li1-p4;
+                &:hover{
+                    color: blue;
+                }
+            }
+            .active i{
+                color: blue;
+            }
+        }
+        // right-social
+        .content{
+            .social-container{
+                .social a{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 50%;
+                    background-color: $d1-p1;
+                    &:hover{
+                        background-color:$li3-p1;
+                        text-decoration: none;
+                    }
+                    i{
+                        color: $base-white;
+                    }
+                }
+            }
+            // coment
+            .coments a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                color: $primary-1;
+                text-decoration: none;
+                border: 1px solid $primary-1;
+                font-size: 10px;
+                i{
+                    color: primary-1;
+                }
+            }
+        }
+    }
+}

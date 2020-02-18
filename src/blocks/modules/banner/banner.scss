@@ -110,6 +110,16 @@
     .banner .container .row .content form button {
             margin: 0;
     }
+    .banner {
+        position: relative;
+        background: $li3-p1;
+        z-index: 5;
+        .clouds,
+        .city,
+        .city-1 {
+            display: none;
+        }
+    }
 }
 @media (max-width:768px){
     .banner .container .row .content ul {

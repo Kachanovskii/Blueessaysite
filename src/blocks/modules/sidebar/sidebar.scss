@@ -1,0 +1,315 @@
+.sidebar{
+    padding: 25px 0;
+    // search
+    .search{
+        border: 1px solid #d8dadb;
+        background-color: #f6f9f9;
+        display: flex;
+        width: 100%;
+        border-radius: 5px;
+        input{
+            background: none;
+            border: none;
+            @include font (#656a70, $Poppins-Regular,14px,400);
+            padding: 15px;
+            width: 80%;
+        }
+        button{
+            background: none;
+            padding: 0 15px;
+            width: 20%;
+            i{
+                color:#656a70;
+                font-size: 15px;
+            }
+        }
+    }
+
+    // categories
+    .categories{
+        padding: 35px 0 0;
+        h6{
+            @include font ($d1-p1, $Poppins-Medium,15px,500); 
+            text-transform: uppercase;
+        }
+        a{
+            @include font ($d2-p4, $Poppins-Regular,13px,400);  
+            text-transform: uppercase;
+        }
+        i{
+            padding-right: 15px;
+            color: $d1-p1;
+        }
+        ul{
+            padding-top: 25px;
+        }
+        li{
+            background-color: $li3-p1;
+            padding: 10px;    
+        }
+        li:nth-of-type(1), li:nth-of-type(2), li:nth-of-type(3){
+            border-bottom: 1px solid $li2-p1;
+        }
+        li:nth-of-type(1){
+            border-top: 1px solid $d1-p1;
+        }
+        li:hover{
+            background-color:#f3fbff;
+        }
+        .arc li {
+           padding: 10px 25px;
+        }
+        .arc a {
+           text-transform: none;
+        }
+    }
+
+    // blog-container
+    .blogs {
+        li {
+            padding: 0;
+            background: none;
+            border-top: none;
+            border-bottom: 1px solid $primary-1;
+            margin-bottom: 25px;
+            &:hover{
+                background: none;
+            }
+        }
+        li:nth-of-type(1){
+            border-top: none;
+        }
+
+        li img {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        li span {
+            @include font ($li1-p4, $Poppins-Regular, 13px, 400);
+            display: block;
+            margin: 5px 0 20px;
+
+            i {
+                color: $li1-p4;
+                padding: 0;
+                letter-spacing: -0.08px;
+                font-size: 12px;
+            }
+        }
+
+        li p {
+            margin: 0;
+            @include font ($d3-p4, $Poppins-Medium, 17px, 500);
+        }
+    }
+
+    // cards, banner
+    .cards {
+        li {
+            border-top: 1px solid $primary-1;
+            border-bottom: none;
+            padding-top: 25px;
+            &:hover{
+                background: none;
+            }
+        }
+        li:nth-of-type(1){
+            border-bottom: none;
+        }
+        
+        // sidebar-banner
+        .sidebar-banner {
+            position: relative;
+            background-color: $primary-1;
+            padding: 30px 20px 130px;
+            span {
+                margin: 0;
+            }
+        }
+
+        .sidebar-banner a {
+            text-decoration: none;
+            background-color: $d1-p1;
+            border: 2px dashed $base-white;
+            border-radius: 10px;
+            padding: 30px 15px 60px;
+            display: block;
+            text-align: center;
+        }
+
+        .span-block {
+            padding: 25px 0;
+        }
+
+        .span-block span {
+            display: inline;
+        }
+
+        .banner-text-1 {
+            @include font ($base-white, $Poppins-Regular, 17px, 400);
+            line-height: 19.03px;
+            letter-spacing: 0.57px;
+            text-transform: none;
+        }
+
+        .banner-text-2 {
+            @include font (#e2f55d, $Poppins-Bold, 39px, 700);
+            line-height: 19.03px;
+        }
+
+        .banner-text-21 {
+            font-size: 19px;
+        }
+
+        .banner-text-3 {
+            @include font ($base-white, $Poppins-Regular, 17px, 400);
+            line-height: 19.03px;
+            display: inline;
+        }
+
+        // img
+        .scissors {
+            width: auto;
+            position: absolute;
+            margin: 0;
+            top: 15px;
+            left: 15px;
+        }
+
+        .rocket-sidebar {
+            width: auto;
+            position: absolute;
+            margin: 0;
+            left: -27px;
+            bottom: -27px;
+        }
+    }
+
+    //advantages
+    .advantages {
+        li{
+            padding: 10px 0;
+            background: none;
+            border: none;
+            &:hover{
+                background: none;
+            }
+            i{
+                font-size: 10px;
+            }
+            a{
+                text-transform: none;
+                font-size: 14px;
+                line-height: 22px;
+            }   
+        }
+        li:nth-of-type(1), li:nth-of-type(2), li:nth-of-type(3){
+            border-bottom: none;
+        }
+        .btn-1{
+            margin-top: 30px;
+            width: 100%;
+            text-transform: none;
+        }
+    }
+
+    // disacounts
+    .discounts{
+        li{
+            display: flex;
+            align-items: center;
+            a{
+                text-decoration: none;
+            }
+            .elips{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                @include font ($base-white,'Poppins-SemiBold',22px,600); 
+                text-transform: uppercase;
+                background-color: $primary-1;
+                width: 75px;
+                height: 75px;
+                border-radius: 50%;
+                border: 2px dashed $base-white;
+            }
+            .order-span{
+                background-color: $primary-2;
+            }
+        }
+        .sale-span{
+            padding-left: 20px;
+        }
+        .sale-span-1{
+            @include font ($li1-p4,$Poppins-Medium,13px,500);  
+        }
+        .sale-span-2{
+            @include font ($d1-p4,'Poppins-SemiBold',22px,600);  
+            text-transform: uppercase;
+        }   
+    }
+
+    @media (max-width:991px){
+        padding: 35px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+
+        .search{
+            grid-column: 1/3;
+            width: 50%;
+        }
+
+        .blog-container{
+            grid-column: 1/3;
+            .blogs{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 15px;
+            }
+        }
+
+        .cards-container{
+            grid-column: 1/3;
+            .cards{
+                display: grid;
+                grid-template-columns:1fr 1fr;
+                gap: 15px;
+            }
+        }
+
+        .advantages .btn-1{
+            width: auto;
+        }
+
+        .discounts{
+            grid-column: 1/3;
+            ul{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 15px;
+                li:nth-of-type(1){
+                    border-top: none;
+                }
+            }
+        }
+    }
+    @media(max-width:575px){
+        .search{
+            width: 100%;
+        }
+
+         .categories{
+             grid-column: 1/3;
+         }
+
+         .cards-container{
+            display: none;
+        }
+        .discounts {
+            display: none;;
+        }
+    }
+}
